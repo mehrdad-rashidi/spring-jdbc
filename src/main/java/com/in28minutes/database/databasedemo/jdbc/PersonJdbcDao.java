@@ -15,7 +15,7 @@ public class PersonJdbcDao {
 
     public List<Person>findAll(){
 
-        jdbcTemplate.query("select * frpm person",new BeanPropertyRowMapper<>(Person.class));
-        return null;
+       return jdbcTemplate.query("select * from person",new BeanPropertyRowMapper<Person>(Person.class));
+
     }
 }
